@@ -135,11 +135,11 @@ ul li:hover{
 	margin-left: 6px;
 	font-size: 12px;
 	color: #B0B0B0;
+	z-index: 12;
 }
 .shop .shop-box{
 	width: 240px;
-	height: 0px;
-	overflow: hidden;
+	height: 80px;
 	background-color: white;
 	line-height: 80px;
 	text-align: center;
@@ -149,14 +149,16 @@ ul li:hover{
 	right: 0px;
 	/* 透明度为0隐藏 */
 	/* opacity: 0; */
-	transition: all .3s;
+	box-shadow:  0 4px 6px rgba(3, 3, 3, 0.2);
+	display: none;
+	z-index: 20;
 }
-.shop:hover .shop-box{
+/* .shop:hover .shop-box{ */
 	/* 透明度为1显示 */
 	/* opacity: 1; */
-	height: 80px;
-	box-shadow: 0 4px 6px rgba(3, 3, 3, 0.2)
-}
+	/* 高度为0，hover设置出值 */
+/* 	height: 80px;
+} */
 /* 黑导航栏结束 */
 
 /* 白导航栏开始 */
@@ -515,7 +517,8 @@ input.text:focus .right{
 	height: 100%;
 	position: absolute;
 	top: 0;
-	left: 1240px;
+	left: 0px;
+	z-index: 5;
 }
 .banner .leftBtn{
 	width: 40px;
@@ -527,6 +530,7 @@ input.text:focus .right{
 	bottom: 0;
 	margin: auto 0;
 	margin-left: 240px;
+	z-index: 14;
 }
 .banner .leftBtn:hover{
 	background-position:0 0;
@@ -542,6 +546,7 @@ input.text:focus .right{
 	bottom: 0;
 	margin: auto 0;
 	right: 0;
+	z-index: 14;
 }
 .banner .container .rightBtn:hover{
 	background-position:-42px 0;
@@ -553,6 +558,7 @@ input.text:focus .right{
 	position: absolute;
 	right: 40px;
 	bottom: 20px;
+	z-index: 11;
 }
 .banner .picture .dots .point{
 	width: 6px;
@@ -824,7 +830,7 @@ input.text:focus .right{
 .flashover ul .list-container .list{
 	width: 1996px;
 	height: 300px;
-	transition: all 1s;
+	transition: all 1.2s;
 }
 .flashover ul li img{
 	margin-left: 34px;
@@ -1281,6 +1287,7 @@ del{
 	color: #E0E0E0;
 	float: left;
 	margin-top:30px;
+	cursor: pointer;
 }
 .commend .container .left:hover{
 	color: #ff6700;
@@ -1296,6 +1303,7 @@ del{
 	color: #B0B0B2;
 	float: right;
 	margin-top:30px;
+	cursor: pointer;
 }
 .commend .container .right:hover{
 	color: #ff6700;
@@ -1307,8 +1315,7 @@ del{
 .commend .container ul{
 	width: 3720px;
 	height: 300px;
-	transition: all 1s;
-
+	transition: all 1.5s;
 }
 .commend ul li:nth-child(5){
 	margin-right: 0;
